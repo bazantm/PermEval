@@ -42,7 +42,7 @@ public class Permutation {
 //        System.out.println();
     }
 
-    void heapPermutation(int a[], int size, int n) {
+    public void heapPermutation(int a[], int size, int n) {
         // if size becomes 1 then prints the obtained 
         // permutation 
         if (size == 1) {

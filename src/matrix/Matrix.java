@@ -12,9 +12,9 @@ public class Matrix {
 
     private int[][] distance;
 
-    public Matrix(int rowN, int colN) {
-        if (0 <= rowN && 0 <= colN) {
-            distance = new int[rowN][colN];
+    public Matrix(int rowN) {
+        if (0 <= rowN) {
+            distance = new int[rowN][rowN];
         } else {
             new InvalidParameterException();
         }
