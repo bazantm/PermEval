@@ -2,7 +2,7 @@ package matrix;
 
 import constants.Parameters;
 import java.security.InvalidParameterException;
-import randomNumbers.RandomDistr;
+import random.RandomDistr;
 
 /**
  *
