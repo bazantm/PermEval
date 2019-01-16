@@ -9,11 +9,11 @@ import java.util.ArrayList;
  */
 public class Permutation {
 
-    private int[][] permutations;
+    //private int[][] permutations;
     private int permutationsCount = 0;
 
-    public Permutation(int[] customers) {
-        permutations = new int[getPermutationCount()][Parameters.TOWN_COUNT];
+    public Permutation() {
+        //permutations = new int[getPermutationCount()][Parameters.TOWN_COUNT];
     }
 
     int getPermutationCount() {
@@ -41,30 +41,32 @@ public class Permutation {
 //        }
     }
 
-    public int[][] getPermutations() {
-        int[][] copy = new int[permutations.length][Parameters.TOWN_COUNT];
-        System.arraycopy(permutations, 0, copy, 0, permutations.length);
+//    public int[][] getPermutations() {
+//        int[][] copy = new int[permutations.length][Parameters.TOWN_COUNT];
+//        System.arraycopy(permutations, 0, copy, 0, permutations.length);
+//
+//        return copy;
+//    }
 
-        return copy;
-    }
-
-    void addPermutation(int a[], int n) {
-        int[] permutace = new int[a.length];
-        System.arraycopy(a, 0, permutace, 0, a.length);
-        permutations[permutationsCount] = permutace;
-        permutationsCount++;
+//    void addPermutation(int a[], int n) {
+//        int[] permutace = new int[a.length];
+//        System.arraycopy(a, 0, permutace, 0, a.length);
+//        
+//        permutationsCount++;
 
 //        for (int i = 0; i < n; i++) {
 //            System.out.print(a[i] + " ");
 //        }
 //        System.out.println();
-    }
+//    }
+
 
     public void heapPermutation(int a[], int size, int n) {
         // if size becomes 1 then prints the obtained 
         // permutation 
         if (size == 1) {
-            addPermutation(a, n);
+//            addPermutation(a, n);
+            // volat vypocet vzdalenosti pro tuto permutaci
         }
 
         for (int i = 0; i < size; i++) {

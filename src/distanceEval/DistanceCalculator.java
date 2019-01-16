@@ -1,8 +1,6 @@
 package distanceEval;
 
 import constants.Parameters;
-import java.util.ArrayList;
-import java.util.Scanner;
 import math.Permutation;
 import matrix.Matrix;
 
@@ -13,21 +11,16 @@ import matrix.Matrix;
 public class DistanceCalculator {
 
     private Permutation permutation;
-    private int[][] permutations;
+    //private int[][] permutations;
     private static int[] customers;
 
     public DistanceCalculator() {
         
         customers = DistanceCalculator.prepareArray();
         
-        permutation = new Permutation(customers);
+        //permutation = new Permutation(customers);
         permutation.heapPermutation(customers, customers.length, customers.length);
-        
-        permutations = permutation.getPermutations();
-        
-    
     }
-    
     
     
     private static int[] prepareArray() {
