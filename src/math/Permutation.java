@@ -1,5 +1,6 @@
 package math;
 
+import constants.Parameters;
 import java.util.ArrayList;
 
 /**
@@ -7,15 +8,26 @@ import java.util.ArrayList;
  * @author bazantm
  */
 public class Permutation {
-    private ArrayList<int[]> permutations;
+
+    private int[][] permutations;
+    private int permutationsCount = 0;
 
     public Permutation(int[] customers) {
-        permutations = new ArrayList<int[]>();
+        permutations = new int[getPermutationCount()][Parameters.TOWN_COUNT];
     }
-    
-    
+
+    int getPermutationCount() {
+        int i, fact = 1;
+        int number = Parameters.TOWN_COUNT;
+        for (i = 1; i <= number; i++) {
+            fact = fact * i;
+        }
+
+        return fact;
+    }
+
     public static void main(String args[]) {
-        
+
 //        int a[] = {1, 2, 3, 4, 5, 6};
 //        perm.heapPermutation(a, a.length, a.length);
 //        
@@ -28,18 +40,20 @@ public class Permutation {
 //            System.out.println("");
 //        }
     }
-    
-    public ArrayList<int[]> getPermutations() {
-        ArrayList<int[]> copy = (ArrayList<int[]>) permutations.clone();
-        
+
+    public int[][] getPermutations() {
+        int[][] copy = new int[permutations.length][Parameters.TOWN_COUNT];
+        System.arraycopy(permutations, 0, copy, 0, permutations.length);
+
         return copy;
     }
 
     void addPermutation(int a[], int n) {
         int[] permutace = new int[a.length];
         System.arraycopy(a, 0, permutace, 0, a.length);
-        permutations.add(permutace);
-        
+        permutations[permutationsCount] = permutace;
+        permutationsCount++;
+
 //        for (int i = 0; i < n; i++) {
 //            System.out.print(a[i] + " ");
 //        }

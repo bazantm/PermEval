@@ -13,7 +13,7 @@ import matrix.Matrix;
 public class DistanceCalculator {
 
     private Permutation permutation;
-    private ArrayList<int[]> permutations;
+    private int[][] permutations;
     private static int[] customers;
 
     public DistanceCalculator() {
@@ -61,15 +61,15 @@ public class DistanceCalculator {
                
         int[][] distances = mDistance.getDistances();
         
-        int[] distanceResults = new int[permutations.size()];
+        int[] distanceResults = new int[permutations.length];
         
         int distance = 0;
         long distanceTotal = 0;
         
         long startTime = System.nanoTime();
                 
-        for (int i = 0; i < permutations.size(); i++) {
-            int[] perm = permutations.get(i);
+        for (int i = 0; i < permutations.length; i++) {
+            int[] perm = permutations[i];
             
             distance = 0;
             for (int j = 1; j < perm.length; j++) {
@@ -85,9 +85,9 @@ public class DistanceCalculator {
         long timeElapsed = endTime - startTime;
         
         System.out.println("Pocet mist na trase: " + Parameters.TOWN_COUNT);
-        System.out.println("Pocet permutaci: " + permutations.size());
+        System.out.println("Pocet permutaci: " + permutations.length);
         System.out.println("Execution time in second: " + (timeElapsed / 1000000000.0)); 
-        System.out.println("AVG(distance): " + ((double) distanceTotal / permutations.size()));
+        System.out.println("AVG(distance): " + ((double) distanceTotal / permutations.length));
                 
         return distanceResults;
     }
