@@ -19,11 +19,11 @@ public class PermMain {
         
                
         
-        int[] distanceresults = calc.calculateDistance(mDistance);
-        PermMain.printArray(distanceresults);
+        int[] distanceresults = calc.calculateDistances(mDistance);
+        //PermMain.printArray(distanceresults);
         
         System.out.println("");
-        
+        System.out.println("Distancni matice:");
         System.out.println(mDistance);
         
     }

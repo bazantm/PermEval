@@ -52,19 +52,19 @@ public class DistanceCalculator {
 //            System.out.println("");
 //        }
         
-        System.out.println("Pocet permutaci: " +
-                permutations.size());
+//        System.out.println("Pocet permutaci: " +
+//                permutations.size());
     }
     
     
-    public int[] calculateDistance(Matrix mDistance) {
-        Scanner input = new Scanner(System.in);
-        
+    public int[] calculateDistances(Matrix mDistance) {
+               
         int[][] distances = mDistance.getDistances();
         
         int[] distanceResults = new int[permutations.size()];
         
         int distance = 0;
+        long distanceTotal = 0;
         
         long startTime = System.nanoTime();
                 
@@ -77,15 +77,18 @@ public class DistanceCalculator {
             }
             
             distanceResults[i] = distance;
+            distanceTotal += distance;
         }
         
         long endTime = System.nanoTime();
         
         long timeElapsed = endTime - startTime;
         
-        System.out.println("Execution time in nanosecond: " + timeElapsed); 
-        input.nextLine();
-        
+        System.out.println("Pocet mist na trase: " + Parameters.TOWN_COUNT);
+        System.out.println("Pocet permutaci: " + permutations.size());
+        System.out.println("Execution time in second: " + (timeElapsed / 1000000000.0)); 
+        System.out.println("AVG(distance): " + ((double) distanceTotal / permutations.size()));
+                
         return distanceResults;
     }
 }
