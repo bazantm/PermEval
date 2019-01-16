@@ -21,6 +21,15 @@ public class Matrix {
 
         initMatrix();
     }
+    
+    public int[][] getDistances() {
+        int[][] distances = new int[distance.length][distance.length];
+        
+        for (int i = 0; i < distances.length; i++) {
+            System.arraycopy(distance[i], 0, distances[i], 0, distance.length);
+        }
+        return distances;
+    }
 
     private void initMatrix() {
         int counter = 0;

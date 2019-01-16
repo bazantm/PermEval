@@ -10,7 +10,7 @@ package constants;
  * @author bazantm
  */
 public class Parameters {
-    public final static int TOWN_COUNT = 6; //n
+    public final static int TOWN_COUNT = 9; //n
     
     public final static int VEHICLE_COUNT = 5; //k
     
@@ -19,4 +19,6 @@ public class Parameters {
     
     public final static int NORMAL_DIST_MEAN = 5;
     public final static int NORMAL_DIST_DEV = 15;
+    
+    public final static int SEED = 0;
 }

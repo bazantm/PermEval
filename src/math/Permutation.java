@@ -7,22 +7,26 @@ import java.util.ArrayList;
  * @author bazantm
  */
 public class Permutation {
-    private ArrayList<int[]> permutations = new ArrayList<int[]>();
-            
-            
+    private ArrayList<int[]> permutations;
+
+    public Permutation(int[] customers) {
+        permutations = new ArrayList<int[]>();
+    }
+    
+    
     public static void main(String args[]) {
-        Permutation perm = new Permutation();
-        int a[] = {1, 2, 3, 4, 5, 6};
-        perm.heapPermutation(a, a.length, a.length);
         
-        ArrayList<int[]> perms = perm.getPermutations();
-        
-        for (int[] perm1 : perms) {
-            for (int i = 0; i < perm1.length; i++) {
-                System.out.print(perm1[i] + ", ");                
-            }
-            System.out.println("");
-        }
+//        int a[] = {1, 2, 3, 4, 5, 6};
+//        perm.heapPermutation(a, a.length, a.length);
+//        
+//        ArrayList<int[]> perms = perm.getPermutations();
+//        
+//        for (int[] perm1 : perms) {
+//            for (int i = 0; i < perm1.length; i++) {
+//                System.out.print(perm1[i] + ", ");                
+//            }
+//            System.out.println("");
+//        }
     }
     
     public ArrayList<int[]> getPermutations() {
