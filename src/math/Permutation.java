@@ -1,6 +1,7 @@
 package math;
 
 import constants.Parameters;
+import distanceEval.DistanceCalculator;
 import java.util.ArrayList;
 
 /**
@@ -11,8 +12,11 @@ public class Permutation {
 
     //private int[][] permutations;
     private int permutationsCount = 0;
+    private DistanceCalculator distCalc;
 
-    public Permutation() {
+    public Permutation(DistanceCalculator distCalc) {
+        this.distCalc = distCalc;
+        
         //permutations = new int[getPermutationCount()][Parameters.TOWN_COUNT];
     }
 
@@ -66,7 +70,7 @@ public class Permutation {
         // permutation 
         if (size == 1) {
 //            addPermutation(a, n);
-            // volat vypocet vzdalenosti pro tuto permutaci
+            distCalc.calculateDistance(a);
         }
 
         for (int i = 0; i < size; i++) {
