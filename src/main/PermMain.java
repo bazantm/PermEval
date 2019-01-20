@@ -17,6 +17,7 @@ public class PermMain {
         int[] towns = DistanceCalculator.prepareArray();
         
         perm.heapPermutation(towns, towns.length, towns.length);
+        distCalc.setEndTime(System.nanoTime());
         
         //calculate distances
 //        DistanceCalculator calc = new DistanceCalculator(mDistance);
@@ -32,6 +33,8 @@ public class PermMain {
         System.out.println("");
         System.out.println("Distancni matice:");
         System.out.println(mDistance);
+        
+        distCalc.getStats();
         
     }
     
