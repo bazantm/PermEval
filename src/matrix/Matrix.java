@@ -2,6 +2,7 @@ package matrix;
 
 import constants.Parameters;
 import java.security.InvalidParameterException;
+import java.util.Random;
 import random.RandomDistr;
 
 /**
@@ -11,8 +12,11 @@ import random.RandomDistr;
 public class Matrix {
 
     private int[][] distance;
+    private Random r;
 
     public Matrix(int rowN) {
+        r = new Random(Parameters.SEED);
+        
         if (0 <= rowN) {
             distance = new int[rowN][rowN];
         } else {
@@ -38,10 +42,10 @@ public class Matrix {
             for (int j = 0; j < i; j++) {
 
                 if (counter % 2 == 0) {
-                    distance[i][j] = RandomDistr.getUniformValue(Parameters.UNIFORM_DIST_A,
+                    distance[i][j] = RandomDistr.getUniformValue(this.r, Parameters.UNIFORM_DIST_A,
                             Parameters.UNIFORM_DIST_B);
                 } else {
-                    distance[i][j] = RandomDistr.getNormalValue(Parameters.NORMAL_DIST_MEAN,
+                    distance[i][j] = RandomDistr.getNormalValue(this.r, Parameters.NORMAL_DIST_MEAN,
                             Parameters.NORMAL_DIST_DEV);
                 }
                 counter++;

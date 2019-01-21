@@ -2,11 +2,14 @@ package main;
 
 import constants.Parameters;
 import distanceEval.DistanceCalculator;
+import java.text.SimpleDateFormat;
+import java.util.Calendar;
 import math.Permutation;
 import matrix.Matrix;
 
 public class PermMain {
     public static void main(String[] args) {
+        
         
         //distance matrix
         Matrix mDistance = new Matrix(Parameters.TOWN_COUNT);
@@ -16,19 +19,14 @@ public class PermMain {
         
         int[] towns = DistanceCalculator.prepareArray();
         
+               Calendar cal = Calendar.getInstance();
+        SimpleDateFormat sdf = new SimpleDateFormat("HH:mm:ss");
+        System.out.println(sdf.format(cal.getTime()));
+        
         perm.heapPermutation(towns, towns.length, towns.length);
         distCalc.setEndTime(System.nanoTime());
         
-        //calculate distances
-//        DistanceCalculator calc = new DistanceCalculator(mDistance);
-        
-//        calc.printPermutations();
         System.out.println("");
-        
-               
-        
-//        int[] distanceresults = calc.calculateDistance();
-        //PermMain.printArray(distanceresults);
         
         System.out.println("");
         System.out.println("Distancni matice:");

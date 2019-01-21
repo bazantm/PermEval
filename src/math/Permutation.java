@@ -2,7 +2,6 @@ package math;
 
 import constants.Parameters;
 import distanceEval.DistanceCalculator;
-import java.util.ArrayList;
 
 /**
  *
@@ -16,7 +15,7 @@ public class Permutation {
 
     public Permutation(DistanceCalculator distCalc) {
         this.distCalc = distCalc;
-        
+
         //permutations = new int[getPermutationCount()][Parameters.TOWN_COUNT];
     }
 
@@ -29,41 +28,6 @@ public class Permutation {
 
         return fact;
     }
-
-    public static void main(String args[]) {
-
-//        int a[] = {1, 2, 3, 4, 5, 6};
-//        perm.heapPermutation(a, a.length, a.length);
-//        
-//        ArrayList<int[]> perms = perm.getPermutations();
-//        
-//        for (int[] perm1 : perms) {
-//            for (int i = 0; i < perm1.length; i++) {
-//                System.out.print(perm1[i] + ", ");                
-//            }
-//            System.out.println("");
-//        }
-    }
-
-//    public int[][] getPermutations() {
-//        int[][] copy = new int[permutations.length][Parameters.TOWN_COUNT];
-//        System.arraycopy(permutations, 0, copy, 0, permutations.length);
-//
-//        return copy;
-//    }
-
-//    void addPermutation(int a[], int n) {
-//        int[] permutace = new int[a.length];
-//        System.arraycopy(a, 0, permutace, 0, a.length);
-//        
-//        permutationsCount++;
-
-//        for (int i = 0; i < n; i++) {
-//            System.out.print(a[i] + " ");
-//        }
-//        System.out.println();
-//    }
-
 
     public void heapPermutation(int a[], int size, int n) {
         // if size becomes 1 then prints the obtained 
