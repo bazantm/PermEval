@@ -84,6 +84,7 @@ public class DistanceCalculator {
         long timeElapsed = endTime - startTime;
         
         System.out.println("Execution time in nanosecond: " + timeElapsed); 
+        System.out.println("Execution time in seconds: " + (timeElapsed / 1000000000.0)); 
         input.nextLine();
         
         return distanceResults;

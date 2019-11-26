@@ -19,8 +19,8 @@ public class PermMain {
         
                
         
-        int[] distanceresults = calc.calculateDistance(mDistance);
-        PermMain.printArray(distanceresults);
+        int[] distanceResults = calc.calculateDistance(mDistance);
+        PermMain.printArray(distanceResults);
         
         System.out.println("");
         
