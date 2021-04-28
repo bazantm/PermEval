@@ -10,7 +10,7 @@ package constants;
  * @author bazantm
  */
 public class Parameters {
-    public final static int TOWN_COUNT = 10; //n
+    public final static int TOWN_COUNT = 5; //n
     
     public final static int VEHICLE_COUNT = 5; //k
     
