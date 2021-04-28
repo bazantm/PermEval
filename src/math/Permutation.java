@@ -23,11 +23,6 @@ public class Permutation {
         int[] permutace = new int[a.length];
         System.arraycopy(a, 0, permutace, 0, a.length);
         permutations.add(permutace);
-        
-//        for (int i = 0; i < n; i++) {
-//            System.out.print(a[i] + " ");
-//        }
-//        System.out.println();
     }
 
     public void heapPermutation(int a[], int size, int n) {

@@ -16,7 +16,7 @@ public class Matrix {
         if (0 <= rowN) {
             distance = new int[rowN][rowN];
         } else {
-            new InvalidParameterException();
+            throw new InvalidParameterException();
         }
 
         initMatrix();

@@ -44,14 +44,6 @@ public class DistanceCalculator {
     
     
     public void printPermutations() {
-        
-//        for (int[] perm1 : permutations) {
-//            for (int i = 0; i < perm1.length; i++) {
-//                System.out.print(perm1[i] + ", ");                
-//            }
-//            System.out.println("");
-//        }
-        
         System.out.println("Pocet permutaci: " +
                 permutations.size());
     }
